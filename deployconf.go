@@ -275,7 +275,6 @@ func main() {
 		ss = fmt.Sprintf("%v\n", strings.Trim(re.ReplaceAllString(ss, ""), "\r\n"))
 		sb := []byte(ss)
 		err = ioutil.WriteFile(environment+"/configs/01-service.yaml", sb, 0644)
-		// fmt.Printf(ss)
 		check(err)
 		fmt.Printf("Created: " + environment + "/configs/01-service.yaml\n")
 	}
